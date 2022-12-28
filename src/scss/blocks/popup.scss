@@ -16,6 +16,14 @@
   }
 }
 
+.popup__video {
+  height: 320px;
+
+  @media ($m-s) {
+    height: 500px;
+  }
+}
+
 .popup__cross-btn {
   position: absolute;
   top: 8px;

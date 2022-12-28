@@ -10,7 +10,37 @@
 .header__inner {
   display: flex;
   align-items: center;
-  height: 72px;
+  height: 56px;
+
+  @media ($m-l) {
+    height: 72px;
+  }
+}
+
+.header__mobile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $c-black;
+  width: 30px;
+  height: 20px;
+  margin-right: 18px;
+
+  .is-open & {
+    display: none;
+  }
+
+  &--open {
+    display: none;
+
+    .is-open & {
+      display: flex;
+    }
+  }
+
+  @media ($m-l) {
+    display: none;
+  }
 }
 
 .header__logo {
@@ -23,11 +53,27 @@
 }
 
 .header__nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
-  margin-left: 50px;
+
+  @media ($ma-l) {
+    position: fixed;
+    top: 56px;
+    left: -500vh;
+    width: 100%;
+    background-color: $c-yellow;
+    padding: 32px 28px;
+
+    .is-open & {
+      left: 0;
+    }
+  }
+
+  @media ($m-l) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 50px;
+  }
 
   @media ($m-xxl) {
     margin-left: 148px;
@@ -35,6 +81,7 @@
 }
 
 .header__nav-item {
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -42,6 +89,14 @@
   color: $c-black;
 
   &:not(:first-child) {
-    margin-left: 16px;
+    margin-top: 18px;
+  }
+
+  @media ($m-l) {
+
+    &:not(:first-child) {
+      margin-left: 16px;
+      margin-top: 0;
+    }
   }
 }

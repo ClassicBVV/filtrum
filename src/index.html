@@ -33,17 +33,40 @@
     <path d="M14 27a1 1 0 0 1-.71-.29 1 1 0 0 1 0-1.42l12-12a1 1 0 0 1 1.42 1.42l-12 12A1 1 0 0 1 14 27Z"/>
     <path d="M26 27a1 1 0 0 1-.71-.29l-12-12a1 1 0 0 1 1.42-1.42l12 12a1 1 0 0 1 0 1.42A1 1 0 0 1 26 27Z"/>
   </symbol>
+  <symbol id="i-burger-closed" viewBox="0 0 30 20">
+    <path
+      d="M2 0h26a2 2 0 0 1 2 2 2 2 0 0 1-2 2H2a2 2 0 0 1-2-2 2 2 0 0 1 2-2ZM2 8h26a2 2 0 0 1 2 2 2 2 0 0 1-2 2H2a2 2 0 0 1-2-2 2 2 0 0 1 2-2ZM2 16h26a2 2 0 0 1 2 2 2 2 0 0 1-2 2H2a2 2 0 0 1-2-2 2 2 0 0 1 2-2Z"/>
+  </symbol>
+  <symbol id="i-burger-open" viewBox="0 0 30 24">
+    <path d="M7.41 1.41 25.8 19.8a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0L4.59 4.24a2 2 0 0 1 0-2.83 2 2 0 0 1 2.82 0Z"/>
+    <path d="M4.41 19.59 22.8 1.2a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83L7.24 22.41a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.82Z"/>
+  </symbol>
+  <symbol id="i-eye" viewBox="0 0 42 54">
+    <path d="M0 0h42v54H0z" style="fill:#feee69"/>
+    <path
+      d="m20.8 24 3.75 3.66v-.19a3.49 3.49 0 0 0-1-2.46A3.6 3.6 0 0 0 21 24Zm-5.08.92 1.83 1.8a3 3 0 0 0-.1.75 3.47 3.47 0 0 0 1 2.46 3.6 3.6 0 0 0 2.51 1 3.31 3.31 0 0 0 .77-.09l1.83 1.8a5.94 5.94 0 0 1-6.78-1.09 5.62 5.62 0 0 1-1.1-6.64Zm-6.54-6.4 2.7 2.64.53.52A13.78 13.78 0 0 0 8 27.42a14 14 0 0 0 13 8.69 14.12 14.12 0 0 0 5.18-1l.5.49 3.46 3.4 1.5-1.47L10.68 17M21 21.63a6 6 0 0 1 4.18 1.7 5.71 5.71 0 0 1 1.73 4.09 5.34 5.34 0 0 1-.43 2.11L30 32.92a13.76 13.76 0 0 0 4-5.5 14 14 0 0 0-13-8.68 14.33 14.33 0 0 0-4.73.81L18.84 22a5.93 5.93 0 0 1 2.16-.37Z"/>
+  </symbol>
 </svg>
 <div id="body-wrapper" class="wrapper">
   <div class="page">
-    <header class="header">
+    <header class="header js-header">
       <div class="container">
         <div class="header__inner">
-          <div class="header__logo">
+          <div class="header__mobile-btn js-menu-btn">
+            <svg class="svg-icon">
+              <use xlink:href="#i-burger-closed"></use>
+            </svg>
+          </div>
+          <div class="header__mobile-btn js-menu-btn header__mobile-btn--open">
+            <svg class="svg-icon">
+              <use xlink:href="#i-burger-open"></use>
+            </svg>
+          </div>
+          <a href="/" class="header__logo">
             <svg class="svg-icon">
               <use xlink:href="#i-logo"></use>
             </svg>
-          </div>
+          </a>
           <div class="header__nav">
             <a href="#" class="header__nav-item" style="text-decoration-line: underline;">О Фильтрум®-СТИ</a>
             <a href="#" class="header__nav-item">Фильтрум®-СТИ — не уголь</a>
@@ -55,7 +78,7 @@
         </div>
       </div>
     </header>
-    <div class="main" id="fullpage">
+    <div class="main js-main" id="fullpage">
       <div class="main__first section" style="background-image: url('assets/img/main/bg.jpg')">
         <div class="main__first-reel">
           <img src="assets/img/main/123.png" alt="">
@@ -63,13 +86,7 @@
         <div class="container">
           <div class="main__first-block">
             <div class="main__first-left">
-              <div class="main__first-left-logo">
-                <svg class="svg-icon">
-                  <use xlink:href="#i-logo"></use>
-                </svg>
-              </div>
-              <div class="main__first-left-text">чтобы в животе
-                порядок навести!
+              <div class="main__first-left-text">Фильтрум<sup>®</sup>-СТИ <br> чтобы в животе порядок навести!
               </div>
             </div>
             <div class="main__first-right">
@@ -87,12 +104,8 @@
         <div class="container">
           <div class="main__second-block">
             <div class="main__second-left">
-              <div class="main__second-left-logo">
-                <svg class="svg-icon">
-                  <use xlink:href="#i-logo"></use>
-                </svg>
-              </div>
-              <div class="main__second-left-text">универсальный <br>сорбент мощного*<br> действия для взрослых и детей в
+              <div class="main__second-left-text">Фильтрум <sup>®</sup>-СТИ – универсальный <br>сорбент мощного*<br>
+                действия для взрослых и детей в
                 удобной форме таблеток
               </div>
             </div>
@@ -127,6 +140,9 @@
             <div class="main__third-pic">
               <img src="assets/img/main/pic2.png" alt="">
             </div>
+            <div class="main__third-pic main__third-pic--mobile">
+              <img src="assets/img/main/pic3.png" alt="">
+            </div>
             <div class="main__third-left">
               <div class="main__third-left-text main__third-left-text--first">Миллионы <br>пор</div>
               <div class="main__third-left-text main__third-left-text--second">Микропоры <sup>4</sup></div>
@@ -141,6 +157,9 @@
                   медиаторы воспаления <sup>1</sup>
                   продукты обмена
                 </div>
+              </div>
+              <div class="main__third-text-mobile">Бактерии, аллергены, алкоголь, медиаторы воспаления <sup>1</sup>,
+                продукты обмена
               </div>
               <div class="main__third-btn">
                 <div class="btn js-video-open">Узнайте, как работает Фильтрум®-СТИ
@@ -169,16 +188,52 @@
       <footer class="footer section fp-auto-height">
         <div class="container">
           <div class="footer__inner">
-            <a href="#" class="footer__logo">
-              <img src="assets/img/logo2.png" alt="">
-            </a>
-            <div class="footer__text">© 2022 АО “Отисифарм”, 123112, г. Москва, ул. Тестовская, дом 10, помещение II,
-              комната 29 info@otcpharm.ru <br>Сообщить о нежелательном явлении<br>Фильтрум®-СТИ - помощь при пищевых
-              отравлениях, cопровождаемых диаерей, тошнотой и рвотой
+            <div class="footer__desktop-contraindications js-contraindications-block">
+              <div class="footer__desktop-contraindications-img">
+                <img src="assets/img/contraindications-desktop.png" alt="">
+              </div>
+              <div class="footer__desktop-contraindications-eye js-contraindications-hidden-btn">
+                <svg class="svg-icon">
+                  <use xlink:href="#i-eye"></use>
+                </svg>
+              </div>
             </div>
-            <a href="#" class="footer__logo footer__logo--second">
-              <img src="assets/img/logo3.png" alt="">
-            </a>
+            <div class="footer__desktop">
+              <a href="#" class="footer__logo">
+                <img src="assets/img/logo2.png" alt="">
+              </a>
+              <div class="footer__text">© 2022 АО “Отисифарм”, 123112, г. Москва, ул. Тестовская, дом 10, помещение II,
+                комната 29 info@otcpharm.ru <br>Сообщить о нежелательном явлении<br>Фильтрум®-СТИ - помощь при пищевых
+                отравлениях, cопровождаемых диаерей, тошнотой и рвотой
+              </div>
+              <a href="#" class="footer__logo footer__logo--second">
+                <img src="assets/img/logo3.png" alt="">
+              </a>
+            </div>
+            <div class="footer__mobile">
+              <div class="footer__mobile-contraindications js-contraindications-block">
+                <div class="footer__mobile-contraindications-img">
+                  <img src="assets/img/contraindications.png" alt="">
+                </div>
+                <div class="footer__mobile-contraindications-eye js-contraindications-hidden-btn">
+                  <svg class="svg-icon">
+                    <use xlink:href="#i-eye"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="footer__text">© 2022 АО “Отисифарм”, 123112, г. Москва, ул. Тестовская, дом 10, помещение II,
+                комната 29 info@otcpharm.ru <br>Сообщить о нежелательном явлении<br>Фильтрум®-СТИ - помощь при пищевых
+                отравлениях, cопровождаемых диаерей, тошнотой и рвотой
+              </div>
+              <div class="footer__mobile-bottom">
+                <a href="#" class="footer__logo">
+                  <img src="assets/img/logo2.png" alt="">
+                </a>
+                <a href="#" class="footer__logo footer__logo--second">
+                  <img src="assets/img/logo3.png" alt="">
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
@@ -193,7 +248,7 @@
     <div class="popup__video">
       <iframe id="video_play2"
               src="//player.vimeo.com/video/244799166?color=ffffff&amp;background=fde414&amp;slideshow=0&amp;video_title=1&amp;video_byline=0"
-              width="100%" height="500" frameborder="0" webkitallowfullscreen="" mozallowfullscreen=""
+              width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen=""
               allowfullscreen=""></iframe>
     </div>
   </div>
