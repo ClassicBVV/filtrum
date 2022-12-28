@@ -1,0 +1,15 @@
+@import "~fullpage.js/dist/jquery.fullpage.min.css";
+@import '~magnific-popup/dist/magnific-popup.css';
+
+@import "_vars.scss";
+@import "_fonts.scss";
+@import "_mixins.scss";
+@import "_start.scss";
+@import "_base.scss";
+
+//blocks
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/main.scss";
+@import "blocks/btn.scss";
+@import "blocks/popup.scss";

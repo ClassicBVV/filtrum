@@ -1,0 +1,293 @@
+.main__first, .main__second, .main__third {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.main__first-reel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  //animation: 20s normal rotate;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+//@keyframes rotate {
+//  0% {
+//    transform: rotate(0deg);
+//  }
+//  100% {
+//    transform: rotate(1800deg);
+//  }
+//}
+
+.main__third {
+  padding-bottom: 24px;
+}
+
+.main__first-block, .main__second-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__second-block {
+  position: relative;
+}
+
+.main__first-left {
+  width: 333px;
+  max-width: 100%;
+}
+
+.main__first-left-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 45px;
+  color: $c-white;
+}
+
+.main__first-left-text, .main__second-left-text {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  color: $c-white;
+  margin-top: 8px;
+}
+
+.main__first-right-text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: right;
+  text-transform: uppercase;
+  color: $c-white;
+  font-style: italic;
+
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+
+.main__second-left {
+  width: 447px;
+  max-width: 100%;
+}
+
+.main__second-left-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 45px;
+  color: $c-white;
+}
+
+.main__second-pic {
+  position: absolute;
+  top: 0;
+  left: 108px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 488px;
+  height: 456px;
+  z-index: 1;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.main__second-right-block {
+  position: relative;
+  width: 285px;
+  max-width: 100%;
+
+  &:not(:first-child) {
+    margin-top: 37px;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: calc(100% + 10px);
+    width: 100%;
+    height: 1px;
+    background-color: $c-white;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: 35px;
+    right: 97%;
+    width: 100%;
+    height: 1px;
+    background-color: $c-white;
+    transform: rotate(19deg);
+  }
+
+  &:last-child {
+
+    &:after {
+      bottom: 8px;
+      transform: rotate(8deg);
+    }
+  }
+}
+
+.main__second-right-block-text {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: right;
+  color: $c-white;
+}
+
+.main__second-right-btn {
+  margin-top: 55px;
+}
+
+.main__third-pic {
+  width: 100%;
+  margin: 0 auto;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.main__third-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: -36px;
+  z-index: 1;
+}
+
+.main__third-text {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 11px;
+  color: $c-white;
+  margin-top: 27px;
+}
+
+.main__third-block {
+  position: relative;
+}
+
+.main__third-left-text {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  font-style: italic;
+  color: $c-white;
+
+  &--first {
+    top: 22%;
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  &--second {
+    top: 45%;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &--third {
+    top: 57%;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &--fourth {
+    top: 68%;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @media ($m-xxl) {
+    &--first {
+      top: 24%;
+    }
+
+    &--second {
+      top: 47%;
+    }
+
+    &--third {
+      top: 59%;
+    }
+
+    &--fourth {
+      top: 71%;
+    }
+  }
+}
+
+.main__third-right-text {
+  position: absolute;
+  right: 0;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  text-align: right;
+  color: $c-white;
+
+  &--first {
+    top: 22%;
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  &--second {
+    font-weight: 500;
+    font-style: italic;
+    top: 39%;
+    font-size: 18px;
+    line-height: 20px;
+    width: 285px;
+    max-width: 100%;
+  }
+
+  &--third {
+    font-weight: 400;
+    font-style: italic;
+    top: 155%;
+    font-size: 24px;
+    line-height: 30px;
+    width: 267px;
+    max-width: 100%;
+  }
+
+  @media ($m-xxl) {
+    &--first {
+      top: 24%;
+    }
+
+    &--second {
+      top: 41%;
+    }
+
+    &--third {
+      top: 155%;
+    }
+  }
+}
