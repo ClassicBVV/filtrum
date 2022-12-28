@@ -10,7 +10,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  //animation: 20s normal rotate;
+  animation: 10s normal rotate;
 
   & > img {
     width: 100%;
@@ -19,17 +19,22 @@
   }
 }
 
-//@keyframes rotate {
-//  0% {
-//    transform: rotate(0deg);
-//  }
-//  100% {
-//    transform: rotate(1800deg);
-//  }
-//}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
 
 .main__third {
   padding-bottom: 24px;
+}
+
+.main__first-block {
+  position: relative;
+  z-index: 1;
 }
 
 .main__first-block, .main__second-block {
