@@ -260,6 +260,12 @@
   @media ($m-l) {
     top: 0;
   }
+
+  @media ($m-xxl) {
+    width: 581px;
+    height: 550px;
+    top: 70px;
+  }
 }
 
 .main__second-right {

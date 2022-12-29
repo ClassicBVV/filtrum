@@ -1,7 +1,10 @@
 import $ from 'jquery';
-import "fullpage.js"
+import "./fullpage.js";
 
 $(document).ready(function() {
+  window.addEventListener('touchstart', function() {
+    // some logic
+  }, {passive:false});
   const contraindications = localStorage.getItem('contraindications');
   if (contraindications == 1) {
     $(".js-contraindications-block").addClass("is-hidden");
